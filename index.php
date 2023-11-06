@@ -26,8 +26,28 @@
   <title>Php OOP </title>
 </head>
 <body>
+  <main>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-4">
+          <div class="card p-2">
+            <h1>Titolo</h1>
+            <small>description:</small>
+            <p>mmovie description</p>
+            <img src="" alt="">
+            <span>cast: </span>
+            <ul>
+              <li>nome degli attori</li>
+            </ul>
+            <small>genre: </small>
+            <span>nome dei generi</span>
 
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </main>
 
 </body>
 </html>
