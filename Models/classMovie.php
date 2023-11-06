@@ -18,11 +18,16 @@ class Movie
     $cast,
     $genre
   ) {
-      $this->title = $title;
-      $this->description = $description;
-      $this->img_url = $img_url;
-      $this->cast = $cast;
-      $this->genre = $genre;
-    }
+    $this->title = $title;
+    $this->description = $description;
+    $this->img_url = $img_url;
+    $this->cast = $cast;
+    $this->genre = $genre;
+  }
+
+  function getMovieDetails()
+  {
+    return "title : $this->title | Description $this->description";
+  }
 
 }
