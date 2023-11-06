@@ -29,21 +29,27 @@
   <main>
     <div class="container">
       <div class="row mt-5">
+
+      <?php foreach ($movies as $movie): ?>
         <div class="col-4">
           <div class="card p-2">
-            <h1>Titolo</h1>
+          <h1>title: <?= $movie->title ?></h1>
             <small>description:</small>
-            <p>mmovie description</p>
-            <img src="" alt="">
+            <p><?= $movie->getDescription() ?></p>
+            <img class="img-fluid" src="<?= $movie->getImg() ?>" alt="immagine">
             <span>cast: </span>
             <ul>
-              <li>nome degli attori</li>
+              <?php foreach ($movie->getCast() as $actor) : ?>
+                <li><?= $actor; ?></li>
+              <?php endforeach; ?>
             </ul>
             <small>genre: </small>
             <span>nome dei generi</span>
 
           </div>
         </div>
+
+      <?php endforeach; ?>
 
       </div>
     </div>
