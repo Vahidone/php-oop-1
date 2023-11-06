@@ -24,10 +24,7 @@ class Movie
         $this->cast = $cast;
         $this->genre = $genre;
     }
-    function getMovieDetails()
-    {
-        return "title : $this->title | Description $this->description";
-    }
+   
 
     function getTitle()
     {

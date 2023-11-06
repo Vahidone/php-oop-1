@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+
+  --bg-body: rgb(56, 15, 56);
+}
+
+body {
+  background-color: var(--bg-body);
+ 
+}
