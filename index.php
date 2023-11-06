@@ -51,7 +51,12 @@
           </div>
         </div>
 
-      <?php endforeach; ?>
+        <?php endforeach; ?>
+        <ul>
+          <?php foreach ($movies as $movie) : ?>
+              <li><?= $movie->getMovieDetails(); ?></li>
+          <?php endforeach; ?>
+        </ul>
 
       </div>
     </div>
