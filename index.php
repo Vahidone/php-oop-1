@@ -44,7 +44,9 @@
               <?php endforeach; ?>
             </ul>
             <small>genre: </small>
-            <span>nome dei generi</span>
+            <?php foreach ($movie->getGenre() as $genre) : ?>
+              <span><?= $genre; ?> </span>
+            <?php endforeach; ?>
 
           </div>
         </div>
