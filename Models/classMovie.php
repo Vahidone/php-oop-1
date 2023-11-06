@@ -30,4 +30,29 @@ class Movie
     return "title : $this->title | Description $this->description";
   }
 
+  function getTitle()
+  {
+    return $this->title;
+  }
+
+  function getDescription()
+  {
+    return $this->description;
+  }
+
+  function getImg()
+  {
+    return $this->img_url;
+  }
+
+  function getGenre()
+  {
+    return $this->genre;
+  }
+
+  function getCast()
+  {
+    return $this->cast;
+  }
+
 }
