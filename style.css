@@ -15,3 +15,10 @@ body {
  
 }
 
+.card img {
+  height: 450px; 
+  object-fit: contain; 
+
+}
+
+

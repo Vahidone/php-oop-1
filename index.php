@@ -27,16 +27,16 @@
         <div class="container text-black">
             <div class="row mt-5">
 
-                <?php foreach ($movies as $movie) : ?>
+                <?php foreach ($movies as $movie): ?>
 
                     <div class="col-4 mt-4">
                         <div class="card p-3">
-                            <h1 class="text-center text-danger"><?= $movie->title ?></h1>
+                            <h1 class="text-center text-danger"><?= $movie->getTitle() ?></h1>
                             <small class="fw-bold">Descrizione:</small>
                             <p><?= $movie->getDescription() ?></p>
                             <img class="img-fluid" src="<?= $movie->getImg() ?>" alt="immagine">
                             <span class="fw-bold">Cast: </span>
-                            <ul>
+                            <ul class="list-unstyled">
                                 <?php foreach ($movie->getCast() as $actor) : ?>
                                     <li><?= $actor; ?></li>
                                 <?php endforeach; ?>
