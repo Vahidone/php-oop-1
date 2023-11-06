@@ -1,4 +1,6 @@
 <?php
+  include __DIR__ . '/Models/classMovie.php';
+  include __DIR__ . '/db.php';
 
 ?>
 
