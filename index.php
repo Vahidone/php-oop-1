@@ -43,7 +43,7 @@
                 <?php foreach ($movies as $movie) : ?>
 
                     <div class="col-4 mt-4">
-                        <div class="card p-2">
+                        <div class="card p-3">
                             <h1 class="text-center text-danger"><?= $movie->title ?></h1>
                             <small class="fw-bold">Descrizione:</small>
                             <p><?= $movie->getDescription() ?></p>
