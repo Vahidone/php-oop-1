@@ -39,33 +39,33 @@
                             <p><?= $production->description ?></p>
                             <img class="img-fluid" src="<?= $production->img_url ?>" alt="immagine">
                             <?php if ($production instanceof Movie): ?>
-                                <p>Anno di pubblicazione: <?= $production->published_year ?></p>
-                                <p>Durata: <?= $production->running_time ?></p>
-                                <p>Cast:</p>
-                                <ul>
+                                <p><span class="fw-bold">Anno di pubblicazione:</span> <?= $production->published_year ?></p>
+                                <p><span class="fw-bold">Durata:</span> <?= $production->running_time ?></p>
+                                <p class="fw-bold fs-5">Cast:</p>
+                                <ul class="list-unstyled">
                                     <?php foreach ($production->cast as $actor): ?>
                                         <li><?= $actor ?></li>
                                     <?php endforeach; ?>
                                 </ul>
-                                <p>Generi:</p>
-                                <ul>
+                                <p class="fw-bold fs-5">Generi:</p>
+                                <ul class="list-unstyled">
                                     <?php foreach ($production->genre as $genre): ?>
                                         <li><?= $genre ?></li>
                                     <?php endforeach; ?>
                                 </ul>
                             <?php elseif ($production instanceof TvSerie): ?>
-                                <p>Primo episodio: <?= $production->aired_from_year ?></p>
-                                <p>Ultimo episodio: <?= $production->aired_to_year ?></p>
-                                <p>Numero di episodi: <?= $production->number_of_episodes ?></p>
-                                <p>Numero di stagioni: <?= $production->number_of_seasons ?></p>
-                                <p>Cast:</p>
-                                <ul>
+                                <p><span class="fw-bold">Primo episodio:</span> <?= $production->aired_from_year ?></p>
+                                <p><span class="fw-bold">Ultimo episodio:</span><?= $production->aired_to_year ?></p>
+                                <p><span class="fw-bold">Numero di episodi:</span> <?= $production->number_of_episodes ?></p>
+                                <p><span class="fw-bold">Nnumeri di stagioni:</span> <?= $production->number_of_seasons ?></p>
+                                <p class="fw-bold fs-5">Cast:</p>
+                                <ul class="list-unstyled">
                                     <?php foreach ($production->cast as $actor): ?>
                                         <li><?= $actor ?></li>
                                     <?php endforeach; ?>
                                 </ul>
-                                <p>Generi:</p>
-                                <ul>
+                                <p class="fw-bold fs-5">Generi:</p>
+                                <ul class="list-unstyled">
                                     <?php foreach ($production->genre as $genre): ?>
                                         <li><?= $genre ?></li>
                                     <?php endforeach; ?>
