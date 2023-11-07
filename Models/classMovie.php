@@ -50,4 +50,15 @@ class Movie
     {
         return $this->cast;
     }
+
+    public function addActor($actorName) {
+        $this->cast[] = $actorName;
+    }
+    public function removeActor($actorName){
+        $indexToDelete = array_search($actorName, $this->cast);
+        if($indexToDelete !== false) {
+            array_splice($this->cast, $indexToDelete, 1);
+        }
+        
+    }
 }

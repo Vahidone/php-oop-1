@@ -1,7 +1,21 @@
 <?php
   require_once __DIR__ . '/Models/classMovie.php';
   require_once  __DIR__ . '/db.php';
+  
+  $Django_Unchained = new Movie(
+    'Django Unchained',
+    'Un avvincente western che segue la vendetta di uno schiavo liberato e di un cacciatore di taglie nel profondo sud degli Stati Uniti.',
+    'https://m.media-amazon.com/images/I/61tTz-WhbdL._AC_UF1000,1000_QL80_.jpg',
+    ['Jamie Foxx', 'Christoph Waltz'],
+    ['western', 'dramma']
+  );
 
+   $Django_Unchained->addActor('Leonardo Di Caprio');
+   $Django_Unchained->addActor('Robert De Niro');
+   $Django_Unchained->removeActor('Jamie Foxx');
+  
+   
+   
 ?>
 
 
