@@ -1,64 +1,25 @@
 <?php
-class Movie
-{
-    public $title;
+require_once __DIR__ . 'production.php';
 
-    public $description;
-
-    public $img_url;
-
-    public $cast;
-
-    public $genre;
+class Movie extends Production {
+    public $published_year;
+    public $running_time;
 
     function __construct(
         $title,
         $description,
         $img_url,
         $cast,
-        $genre
+        $genre,
+        $published_year,
+        $running_time
     ) {
         $this->title = $title;
         $this->description = $description;
         $this->img_url = $img_url;
         $this->cast = $cast;
         $this->genre = $genre;
-    }
-   
-
-    function getTitle()
-    {
-        return $this->title;
-    }
-
-    function getDescription()
-    {
-        return $this->description;
-    }
-
-    function getImg()
-    {
-        return $this->img_url;
-    }
-
-    function getGenre()
-    {
-        return $this->genre;
-    }
-
-    function getCast()
-    {
-        return $this->cast;
-    }
-
-    public function addActor($actorName) {
-        $this->cast[] = $actorName;
-    }
-    public function removeActor($actorName){
-        $indexToDelete = array_search($actorName, $this->cast);
-        if($indexToDelete !== false) {
-            array_splice($this->cast, $indexToDelete, 1);
-        }
-        
+        $this->published_year = $published_year;
+        $this->running_time = $running_time;
     }
 }
