@@ -39,13 +39,13 @@
                             <p><?= $production->description ?></p>
                             <img class="img-fluid" src="<?= $production->img_url ?>" alt="immagine">
                             <?php if ($production instanceof Movie): ?>
-                                <p>Published Year: <?= $production->published_year ?></p>
-                                <p>Running Time: <?= $production->running_time ?></p>
+                                <p>Anno di pubblicazione: <?= $production->published_year ?></p>
+                                <p>durata: <?= $production->running_time ?></p>
                             <?php elseif ($production instanceof TvSerie): ?>
-                                <p>Aired From: <?= $production->aired_from_year ?></p>
-                                <p>Aired To: <?= $production->aired_to_year ?></p>
-                                <p>Number of Episodes: <?= $production->number_of_episodes ?></p>
-                                <p>Number of Seasons: <?= $production->number_of_seasons ?></p>
+                                <p>Primo episodio: <?= $production->aired_from_year ?></p>
+                                <p>Ultimo episodio: <?= $production->aired_to_year ?></p>
+                                <p>Numero di episodi: <?= $production->number_of_episodes ?></p>
+                                <p>Numero di stagioni: <?= $production->number_of_seasons ?></p>
                             <?php endif; ?>
                         </div>
                     </div>

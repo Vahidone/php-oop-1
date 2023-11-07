@@ -15,7 +15,7 @@ $productions = [
     new TvSerie(
         'Friends',
         'Una serie televisiva comica che segue...',
-        'https://www.friends-tv.org/graphics/season3.jpg',
+        'https://static.posters.cz/image/1300/poster/friends-characters-i86753.jpg',
         ['Jennifer Aniston', 'Courteney Cox'],
         ['commedia', 'romantico'],
         1994,
