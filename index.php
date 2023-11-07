@@ -1,13 +1,12 @@
 <?php
-  require_once 'Models/Production.php';
-  require_once 'Models/Movie.php';
-  require_once 'Models/TvSerie.php';
-  require_once 'db.php';
+  require_once __DIR__ . '/Models/Production.php';
+  require_once __DIR__ . '/Models/Movie.php';
+  require_once __DIR__ . '/Models/TvSerie.php';
+  require_once __DIR__ . '/db.php';
   
 
    
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -53,7 +52,7 @@
                                         <li><?= $genre ?></li>
                                     <?php endforeach; ?>
                                 </ul>
-                            <?php elseif ($production instanceof TvSerie): ?>
+                                <?php elseif ($production instanceof TvSerie): ?>
                                 <p><span class="fw-bold">Primo episodio:</span> <?= $production->aired_from_year ?></p>
                                 <p><span class="fw-bold">Ultimo episodio:</span><?= $production->aired_to_year ?></p>
                                 <p><span class="fw-bold">Numero di episodi:</span> <?= $production->number_of_episodes ?></p>

@@ -1,11 +1,11 @@
 <?php
-require_once 'Production.php';
+require_once __DIR__ . '/Production.php';
 
 class Movie extends Production {
     public $published_year;
     public $running_time;
 
-    function __construct(
+    public function __construct(
         $title,
         $description,
         $img_url,

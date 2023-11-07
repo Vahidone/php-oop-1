@@ -1,6 +1,6 @@
 <?php
-require_once 'Models/Movie.php';
-require_once 'Models/TvSerie.php';
+require_once __DIR__ . '/Models/Movie.php';
+require_once __DIR__ . '/Models/TvSerie.php';
 
 $productions = [
     new Movie(
