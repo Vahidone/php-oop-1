@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . 'production.php';
+require_once 'Production.php';
 
 class Movie extends Production {
     public $published_year;
