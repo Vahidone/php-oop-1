@@ -14,7 +14,7 @@ $productions = [
     ),
     new TvSerie(
         'Friends',
-        'Una serie televisiva comica che segue...',
+        'Una serie televisiva comica che segue le vite intrecciate di sei amici mentre navigano attraverso la vita e amore a New York, affrontando sfide comiche e situazioni imbarazzanti lungo il percorso.',
         'https://static.posters.cz/image/1300/poster/friends-characters-i86753.jpg',
         ['Jennifer Aniston', 'Courteney Cox'],
         ['commedia', 'romantico'],
