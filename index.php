@@ -1,20 +1,10 @@
 <?php
-  require_once __DIR__ . '/Models/classMovie.php';
-  require_once  __DIR__ . '/db.php';
+  require_once 'Models/Production.php';
+  require_once 'Models/Movie.php';
+  require_once 'Models/TvSerie.php';
+  require_once 'db.php';
   
-  $Django_Unchained = new Movie(
-    'Django Unchained',
-    'Un avvincente western che segue la vendetta di uno schiavo liberato e di un cacciatore di taglie nel profondo sud degli Stati Uniti.',
-    'https://m.media-amazon.com/images/I/61tTz-WhbdL._AC_UF1000,1000_QL80_.jpg',
-    ['Jamie Foxx', 'Christoph Waltz'],
-    ['western', 'dramma']
-  );
 
-   $Django_Unchained->addActor('Leonardo Di Caprio');
-   $Django_Unchained->addActor('Robert De Niro');
-   $Django_Unchained->removeActor('Jamie Foxx');
-  
-   
    
 ?>
 
@@ -36,38 +26,35 @@
 </head>
 
 <body>
-
     <main>
         <div class="container text-black">
             <div class="row mt-5">
 
-                <?php foreach ($movies as $movie): ?>
+                <?php foreach ($productions as $production): ?>
 
                     <div class="col-4 mt-4">
                         <div class="card p-3">
-                            <h1 class="text-center text-danger"><?= $movie->getTitle() ?></h1>
+                            <h1 class="text-center text-danger"><?= $production->title ?></h1>
                             <small class="fw-bold fs-5">Descrizione:</small>
-                            <p><?= $movie->getDescription() ?></p>
-                            <img class="img-fluid" src="<?= $movie->getImg() ?>" alt="immagine">
-                            <span class="fw-bold fs-5">Cast: </span>
-                            <ul class="list-unstyled">
-                                <?php foreach ($movie->getCast() as $actor) : ?>
-                                    <li><?= $actor; ?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                            <small class="fw-bold fs-5">Genere: </small>
-                            <?php foreach ($movie->getGenre() as $genre) : ?>
-                                <span><?= $genre; ?> </span>
-                            <?php endforeach; ?>
+                            <p><?= $production->description ?></p>
+                            <img class="img-fluid" src="<?= $production->img_url ?>" alt="immagine">
+                            <?php if ($production instanceof Movie): ?>
+                                <p>Published Year: <?= $production->published_year ?></p>
+                                <p>Running Time: <?= $production->running_time ?></p>
+                            <?php elseif ($production instanceof TvSerie): ?>
+                                <p>Aired From: <?= $production->aired_from_year ?></p>
+                                <p>Aired To: <?= $production->aired_to_year ?></p>
+                                <p>Number of Episodes: <?= $production->number_of_episodes ?></p>
+                                <p>Number of Seasons: <?= $production->number_of_seasons ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
+
                 <?php endforeach; ?>
-                
+
             </div>
         </div>
-
     </main>
-
 </body>
 
 </html>
