@@ -18,6 +18,8 @@ class TvSerie extends Production {
     $number_of_episodes,
     $number_of_seasons
   ) {
+    parent::__construct( $title,  $description,  $img_url,  $cast, $genre);
+    
     $this->title = $title;
     $this->description = $description;
     $this->img_url = $img_url;
