@@ -3,8 +3,8 @@ require_once __DIR__ . '/Models/Movie.php';
 require_once __DIR__ . '/Models/TvSerie.php';
 
 $productions = [
-    new Movie(
-        'La dolce vita',
+    $La_dolce_vita = new Movie(
+        '',
         'Un classico del cinema italiano del 1960, esplora la vita mondana e vuota  di un giornalista romano in mezzo alla celebrità, al lusso e alla disillusione.',
         'https://pad.mymovies.it/filmclub/2002/08/069/locandina.jpg',
         ['Marcello Mastroianni', 'Anita Ekberg'],
