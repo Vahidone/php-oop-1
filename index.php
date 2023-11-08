@@ -51,7 +51,8 @@ try {
                             <p><?= $production->description ?></p>
                             <img class="img-fluid" src="<?= $production->img_url ?>" alt="immagine">
                             <?php if ($production instanceof Movie): ?>
-                                <p><span class="fw-bold">Anno di pubblicazione:</span> <?= $production->published_year ?></p>
+                                <p><span class="fw-bold">Anno di pubblicazione:</span>
+                                <?= $production->getPublishedYear() ?></p>
                                 <p><span class="fw-bold">Durata:</span> <?= $production->running_time ?></p>
                                 <p class="fw-bold fs-5">Cast:</p>
                                 <ul class="list-unstyled">
